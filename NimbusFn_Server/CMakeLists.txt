@@ -10,4 +10,9 @@ if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET NimbusFn_Server PROPERTY CXX_STANDARD 20)
 endif()
 
+if(MSVC)
+    set(CMAKE_GENERATOR_PLATFORM Win32)
+    set(CMAKE_GENERATOR_PLATFORM x86)
+endif()
+
 # TODO: Add tests and install targets if needed.
